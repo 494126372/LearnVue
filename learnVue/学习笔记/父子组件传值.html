@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>自定义配置的路由routers.js</h1>
+        <router-view/>// router-view 根组件包含的子组件内容 也就是路由配置要显示的默认页内容 ！！！
+
+
+
+        <div id="example">
+            <parent></parent>
+        </div>
+        <div id="parent">
+
+            <child message="子组件信息1">11</child>
+            <child message="子组件信息2">22</child>
+
+
+        </div>
+    </div>
+
+    <script>
+        //   父子组件 
+        var childNode = {
+            template: '<div>{{message}}</div>',
+            props: ['message']
+        }
+        var parentNode = {
+            template: `
+        <div class="parent">
+          <child message="aaa">11</child>
+          <child message="bbb">22</child>
+        </div> `,
+            components: {
+                'child': childNode
+            }
+        };
+        // 创建根实例
+        new Vue({
+            el: '#example',
+            components: {
+                'parent': parentNode
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>index.html</title>
+</head>
+
+<body>
+
+    定义的Vue实例讲挂在到index.html的页面的空的根节点下面 #app 一个vue页面通常由三部分组成:模板(template)、js(script)、样式(style) 其中模板只能包含一个父节点，也就是说顶层的div只能有一个（例如下图，父节点为#app的div，其没有兄弟节点）
+    <h2> （上部分 .html）</h2>
+    router-view router-view>是子路由视图，后面的路由页面(Test.Vue )都显示在此处
+    <div id="app" border='1'></div> // index.html如其他html一样,但一般只定义一个空的根节点,(内容是 组件App.Vue或者Login.Vue )在main.js里面定义的实例将挂载在根节点下，内容都通过vue组件来填充 除根组件内容外页面其他内容组成是由index.html和路由配置的跳转页面觉得
+
+
+    <h2>(下部分 .html) </h2>
+    <dl>
+
+        <dt>标题dt</dt>
+        <dd>内容DD</dd>
+        <dt>标题dt</dt>
+        <dd>内容DD</dd>
+    </dl>
+
+    <!-- built files will be auto injected -->
+</body>
+
+</html>
