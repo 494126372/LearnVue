@@ -15,18 +15,7 @@ export default new Router({
     routes: [
 
 
-        {
-            path: '/axios',
-            name: 'Axois',
-            component: Axios,
 
-        },
-        {
-            path: '/VueResource',
-            name: 'VueResource',
-            component: VueResource,
-
-        },
         {
             path: '/',
             name: 'Index',
@@ -53,7 +42,18 @@ export default new Router({
             component: Login,
             　　children: [　　　{　　　　 path: '/', 　　　component: Axios }　　]
         },
+        {
+            path: '/axios',
+            name: 'Axois',
+            component: Axios,
 
+        },
+        {
+            path: '/VueResource',
+            name: 'VueResource',
+            component: VueResource,
+
+        },
 
     ]
 })
