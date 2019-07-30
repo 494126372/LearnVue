@@ -12,7 +12,19 @@
         :key="index"
       >{{ "姓名："+ item.name +"邮箱: "+item.email }}
       </li>
+     
+       
+     
+
+ 
     </ul>
+    <el-input v-show="see" clearable style="width:20%" v-model="header.today" maxlength="32" placeholder="当天">
+    </el-input>
+        
+    <el-input v-show="see" clearable style="width:20%" v-model="header.thisweek" maxlength="32" placeholder="周">
+    </el-input>
+        
+      
     <p>{{   <span> 
        谈到跨域，首先得了解CORS（Cross origin resource sharing） 跨域资源共享，
       它是w3c的一个标准，是一份浏览器技术规范，提供了web服务从不同网域传来沙盒脚本的方法，
@@ -50,6 +62,7 @@ export default {
       reviceDates: [],
       header: [],
       istrue:"false",
+      see:true,
     };
   },
   methods: {
@@ -60,8 +73,8 @@ export default {
         .get(url)
         .then(function(response) {
           self.reviceDates = response.data.maintainers;
-          self.header = response.headers;
-          //   console.log(response.headers);
+          self.header = response.data.download;
+            console.log(response.data.download);
           self.istrue='true';
         })
         .catch(function(error) {
@@ -87,6 +100,7 @@ export default {
     IsSee(e) {
       console.log("methods 不同调用方法");
         this.istrue='false';
+        this.see=!this.see;
     },
     SeeMe:function(){
         

@@ -23,8 +23,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 // 引用调用组件 1.main入口引用组件并命名 ./指代当前src 代码目录
 Vue.config.productionTip = false
-import axios from 'axios' // 1、在这里引入axios
-Vue.prototype.$axios = axios // 2、在vue中使用axios
+    // import axios from 'axios' // 1、在这里引入axios  
+    // Vue.prototype.$axios = axios // 2、在vue中使用axios
 Vue.use(VueResource)
 Vue.use(ElementUI)
     /* eslint-disable no-new */
