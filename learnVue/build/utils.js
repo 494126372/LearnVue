@@ -49,7 +49,8 @@ exports.cssLoaders = function(options) {
         if (options.extract) {
             return ExtractTextPlugin.extract({
                 use: loaders,
-                fallback: 'vue-style-loader'
+                fallback: 'vue-style-loader',
+                publicPath: '../../' // 发布的时候添加的目录 img加载不上问题 原本没有
             })
         } else {
             return ['vue-style-loader'].concat(loaders)

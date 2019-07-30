@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     GetjsonpData() {
-      var url = "/api"; // 这里就是刚才的config/index.js中的/api
+      var url = "https://registry.npm.taobao.org/"; // 这里就是刚才的config/index.js中的/api
       var self = this;
       axios
         .get(url)

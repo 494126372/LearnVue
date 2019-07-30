@@ -5,7 +5,7 @@
             <span> <router-link to="/"> Footer 组件 首页 |</router-link></span>
            <span> <router-link to="/manage">manage 管理 | </router-link></span>
             <span> <router-link to="/Axios">Test Axios  |</router-link></span>
-         
+         <span> <router-link to="/login"> API登陆  |</router-link></span>
              <span> <router-link to="/main_helloworld">HelloWorld | </router-link></span>
              <button  class="sign" @click="login" >按钮的跳转不是a标签</button>
               <span> <router-link to="/home">Home 页父子组件  |</router-link></span>

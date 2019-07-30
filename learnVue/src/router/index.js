@@ -9,13 +9,17 @@ import Login from '@/Login' // 引入组件
 
 import Home from '@/components/home'
 import VueResource from '@/components/VueResource'
+
 Vue.use(Router)
 Vue.use(VueResource)
 export default new Router({
     routes: [
 
-
-
+        // API登陆
+        {
+            path: '/login',
+            component: resolve => require(['../components/Login.vue'], resolve)
+        },
         {
             path: '/',
             name: 'Index',
