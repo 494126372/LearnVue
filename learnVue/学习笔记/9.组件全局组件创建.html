@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件的注册</title>
+
+</head>
+
+<body>
+    <div id='app'>
+        <P>el的模板内容</P>
+        <h1> {{ msg }}</h1>
+    </div>
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript">
+    // 1 .局部组件的注册 
+    /* 组件定义：除了 new Vue() 里头的的El 之外其余都可以作为组件内容绑定
+     */
+    var Header = {
+        template: '<div class="headers" >我是Header标题栏</div>'
+    }
+    var Vcontent = {
+        template: '<div class="Content" >我是Content内容栏</div>'
+    }
+    var Slider = {
+        template: '<div class="Slider">我是Slider侧边栏</div>'
+    }
+    new Vue({
+        el: "#app",
+        data() {
+            return {
+                msg: "绑定的数据内容"
+            }
+        },
+        components: {
+
+            'v-Header': Header, // 2 .组件挂载  命名一定到驼峰命名或者带-大小写无所谓
+            Vcontent,
+            Slider
+
+        },
+        // 3 .组件引用
+        template: `
+           <div class='app'>
+              <p>templete模板渲染的内容优先级高于普通标签绑定</p>    
+              <h4>{{ msg }}</h4>
+              <span>组件的引用</span>
+                <div class="hea" >
+                        <v-Header/>  
+                </div>
+               
+                <Slider/>
+                <Vcontent/>
+            </div>
+            
+           `
+
+
+
+
+    })
+</script>
+<style scoped>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .headers {
+        background-color: cadetblue;
+        height: 200px;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    .Content {
+        background-color: antiquewhite;
+        float: left;
+        display: block;
+        height: 400px;
+        padding-left: 20px;
+        width: 88%;
+    }
+    
+    .Slider {
+        float: left;
+        display: block;
+        background-color: chartreuse;
+        width: 10%;
+        height: 400px;
+        float: left;
+    }
+    
+    .hea {
+        color: yellow;
+    }
+</style>
