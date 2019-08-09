@@ -10,6 +10,7 @@
              <button  class="sign" @click="login" >按钮的跳转不是a标签</button>
               <span> <router-link to="/home">Home 页父子组件  |</router-link></span>
                <span> <router-link to="/VueResource">VueResource Get Post 请求  |</router-link></span>
+                <span> <router-link to="/print">打印Excel 带样式 |</router-link></span>
               <hr>
 
         </ul>

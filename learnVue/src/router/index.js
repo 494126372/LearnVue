@@ -9,6 +9,7 @@ import Login from '@/Login' // 引入组件
 
 import Home from '@/components/home'
 import VueResource from '@/components/VueResource'
+import { resolve } from 'url';
 
 Vue.use(Router)
 Vue.use(VueResource)
@@ -56,6 +57,11 @@ export default new Router({
             path: '/VueResource',
             name: 'VueResource',
             component: VueResource,
+
+        }, {
+            path: '/print',
+            name: 'printExcel',
+            component: resolve => require(['../components/printExcel.vue'], resolve),
 
         },
 
