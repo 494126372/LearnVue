@@ -11,6 +11,7 @@
               <span> <router-link to="/home">Home 页父子组件  |</router-link></span>
                <span> <router-link to="/VueResource">VueResource Get Post 请求  |</router-link></span>
                 <span> <router-link to="/print">打印Excel 带样式 |</router-link></span>
+                <span> <router-link to="/print1">打印Excel2原生 |</router-link></span>
               <hr>
 
         </ul>

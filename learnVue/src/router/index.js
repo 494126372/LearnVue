@@ -65,5 +65,12 @@ export default new Router({
 
         },
 
+        {
+            path: '/print1',
+            name: 'prinrExcel2',
+            component: resolve => require(['../components/prinrExcel2.vue'], resolve),
+
+        }
+
     ]
 })
