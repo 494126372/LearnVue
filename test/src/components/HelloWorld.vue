@@ -33,7 +33,8 @@
       <el-button type="primary" @click="RouterClick1" icon="el-icon-edit">Router上一頁</el-button>
        <el-button type="primary" @click="ViewQrcode" icon="el-icon-edit">查看二维码</el-button>
        <el-button type="primary" @click="ViewSchart" icon="el-icon-edit">图标ViewSchart</el-button>
-         <el-button icon="el-icon-edit"  @click="()=>{ this.$router.go(-1) }"  >返回 行内点击事件</el-button>
+      <a href="tanchishe.html">貪吃蛇</a>
+      <el-button icon="el-icon-edit"  @click="()=>{ this.$router.go(-1) }"  >返回 行内点击事件</el-button>
     </el-row>
   </div>
 </template>

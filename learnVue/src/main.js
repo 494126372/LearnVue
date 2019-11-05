@@ -14,7 +14,7 @@ import routers from './routers';
 import VueResource from 'vue-resource';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+import wx from 'weixin-js-sdk';
 
 // import Vuex from 'vuex'
 // import store from './vuex/store' // 自己创建 store.js
